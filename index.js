@@ -11,11 +11,8 @@ const app = express()
 app.use( express.static('public') )
 
 //Rutas
-// app.get('/', (req, res) => {
-//     res.json({
-//         ok:true
-//     })
-// })
+app.use('/api/auth', require('./routes/auth'))
+//TODO:CRUD:eventos
 
 //Escuchar peticiones
 app.listen(process.env.PORT, () => {
